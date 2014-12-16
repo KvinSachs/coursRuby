@@ -9,7 +9,7 @@ class CsvReader
   end
 
   def readCSVfile(path)
-    @books_in_store || = Array.new
+    @books_in_store ||= Array.new
 
     CSV.foreach(path, headers: true) do |book|
       newBook = BookInStock.new(book['ISBN'], book['Price'])
