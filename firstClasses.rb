@@ -1,7 +1,11 @@
 require 'date'
 
 def sum(n1, n2)
-  result = n1 + n2
+  if n1.kind_of? String or n2.kind_of? String
+    result = n1 + ' ' + n2
+  else
+    result = n1 + n2
+  end
   return result
 end
 
